@@ -3,7 +3,7 @@ program Project1;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  UnitPage in '..\UnitPage.pas' {Form1};
+  UnitPage in 'UnitPage.pas' {Form1};
 
 {$R *.res}
 

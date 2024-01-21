@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object SkPaintBox1: TSkPaintBox
+    Align = Contents
+    HitTest = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    OnClick = SkPaintBox1Click
+    OnMouseDown = SkPaintBox1MouseDown
+    OnDraw = SkPaintBox1Draw
+    object SwipePoint: TSelectionPoint
+      EnableDragHighlight = False
+      GripSize = 3.000000000000000000
+      HitTest = False
+      Opacity = 0.000000000000000000
+      ParentBounds = False
+      Position.X = 320.000000000000000000
+      Position.Y = 176.000000000000000000
+      RotationCenter.X = 0.000000000000000000
+      RotationCenter.Y = 0.000000000000000000
+      Size.Width = 17.000000000000000000
+      Size.Height = 6.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = False
+      object SwipePathAnimation: TPathAnimation
+        Tag = 2
+        AnimationType = InOut
+        Duration = 1.000000000000000000
+        OnProcess = SwipePathAnimationProcess
+        OnFinish = SwipePathAnimationFinish
+      end
+    end
+    object swipe: TSwipeTransitionEffect
+      Enabled = False
+      Deep = 50.000000000000000000
+    end
+  end
+end
